@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         "head": '"Arimo", sans-serif',
       },
+      dropShadow: {
+        '3xl': '1px 2px 1.5px rgba(0, 0, 0, 0.9)',
+      }
     },
   },
   plugins: [],

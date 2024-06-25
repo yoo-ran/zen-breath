@@ -9,7 +9,7 @@ import logo from "../assets/logo-02.svg"
 
 const Header = () => {
     return (
-        <header className='w-full h-lvh bg-purple flex flex-col justify-between drop-shadow-xl'>
+        <header className='w-full h-dvh bg-purple flex flex-col justify-between drop-shadow-xl'>
             <div className={`flex flex-col items-center justify-center md:h-1/4 md:gap-y-4`}>
                 <img src={logo} className='md:w-8'/>
                 <h1 className={`font-head font-bold md:text-xl`}>ZenBreath</h1>
