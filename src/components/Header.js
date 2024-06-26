@@ -20,7 +20,7 @@ const Header = () => {
                     <li className={` w-full h-full flex items-center`}><Link to="/" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faHouseChimney} /> Home</Link></li>
                     <li className={` w-full h-full flex items-center`}><Link to="/meditation" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faFan} /> Meditation</Link></li>
                     <li className={` w-full h-full flex items-center`}><Link to="/Music" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faMusic} /> Music</Link></li>
-                    <li className={` w-full h-full flex items-center`}><Link to="/breathe" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faWind} /> Breathe</Link></li>
+                    <li className={` w-full h-full flex items-center`}><Link to="/breath" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faWind} /> Breathe</Link></li>
                     <li className={` w-full h-full flex items-center`}><Link to="/profile" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faClover} /> Profile</Link></li>
                     <li className={` w-full h-full flex items-center`}><Link to="/setting" className={`flex items-center md:gap-x-4`}><FontAwesomeIcon icon={faGear} /> Setting</Link></li>
                 </ul>
