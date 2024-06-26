@@ -19,7 +19,7 @@ const Breath = () => {
 
     // Function to start inhalation countdown
     const startInhalationCountdown = () => {
-        if (!isCountingIn && !isCountingEx && !isCountingNum) {
+        if (!isCountingIn && !isCountingEx) {
             setIsCountingIn(true);
             let currentInCount = 0;
 
@@ -37,7 +37,7 @@ const Breath = () => {
 
     
     const exCountFuntion = () =>{
-        if(inCount===5 && !isCountingEx && !isCountingNum){
+        if(inCount===5 && !isCountingEx ){
             setInCount(0); // Example: inhalation countdown starts from 5
             setIsCountingEx(true);
             let currentExCount = 0;
@@ -55,7 +55,7 @@ const Breath = () => {
     }
 
     const numCountFuntion = () => {
-        if(inCount===0 && exCount === 3 && !isCountingNum){
+        if(inCount===0 && exCount === 3){
             setExCount(0)
             setNumCount(numCount-1)
             // let currentNumCount = 3;
@@ -123,7 +123,7 @@ const Breath = () => {
                         type="button" 
                         className='start relative overflow-hidden border border-2 rounded-full px-4 py-1 text-blue text-lg font-bold  bg-white bg-opacity-30 backdrop-blur-sm' 
                         onClick={triggerAnimation}
-                        disabled={isCountingIn || isCountingEx || isCountingNum}
+                        disabled={isCountingIn || isCountingEx }
                     >
                         Start
                     </button>
