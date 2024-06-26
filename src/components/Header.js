@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <header className='w-full h-dvh bg-purple flex flex-col justify-between drop-shadow-xl'>
             <div className={`flex flex-col items-center justify-center md:h-1/4 md:gap-y-4`}>
-                <img src={logo} className='md:w-8'/>
+                <img src={logo} alt="logo" className='md:w-8'/>
                 <h1 className={`font-head font-bold md:text-xl`}>ZenBreath</h1>
                 <button className={`text-blue bg-white drop-shadow-xl rounded-full md:py-1 md:w-1/2`}>60% OFF</button>
             </div>

@@ -14,7 +14,6 @@ const Breath = () => {
     const [numCount, setNumCount] = useState(3);
     const [isCountingIn, setIsCountingIn] = useState(false);
     const [isCountingEx, setIsCountingEx] = useState(false);
-    const [isCountingNum, setIsCountingNum] = useState(false);
     
     let intervalIdIn, intervalIdEx;
 
