@@ -28,5 +28,5 @@ jobs:
         server: ftp.yoorankim.com
         username: ftp-portfolio@yoorankim.com
         password: ${{ secrets.FTP_DEPLOY }}
-        local-dir: dist/
+        local-dir: build/
         server-dir: public_html/zenbreath/
