@@ -16,6 +16,8 @@ jobs:
         node-version: '21'
       
     - name: 🔨 Build Project
+      env:
+        CI: ""
       run: |
         npm install
         npm run build
