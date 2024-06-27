@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'purple': 'rgba(203,184,255,0.5)',
-        'orange': 'rgba(248,163,84,0.7)',
+        'orange': 'rgba(248,163,84,0.3)',
         'darkorange': '#FF7B3A',
         'white': '#fff',
         'black': '#000',
@@ -21,8 +21,13 @@ module.exports = {
         "head": '"Arimo", sans-serif',
       },
       dropShadow: {
-        '3xl': '1px 2px 1.5px rgba(0, 0, 0, 0.9)',
+        'text': '1px 2px 4px rgba(0, 0, 0, 0.9)',
+        'bg': '1px 2px 1.5px rgba(255, 255, 255, 0.9)',
+      },
+      borderRadius: {
+        'large': '3rem',
       }
+  
     },
   },
   plugins: [],

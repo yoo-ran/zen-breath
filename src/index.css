@@ -110,6 +110,13 @@ code {
   cursor: pointer;
 }
 
+#gradient {
+  background: rgb(249,160,221);
+  background: -moz-radial-gradient(circle, rgba(249,160,221,1) 0%, rgba(249,160,160,0.47) 16%, rgba(249,160,103,0.16) 44%, rgba(249,160,62,0.04) 59%, rgba(249,160,36,0.01) 68%, rgba(240,107,138,0) 73%);
+  background: -webkit-radial-gradient(circle, rgba(249,160,221,1) 0%, rgba(249,160,160,0.47) 16%, rgba(249,160,103,0.16) 44%, rgba(249,160,62,0.04) 59%, rgba(249,160,36,0.01) 68%, rgba(240,107,138,0) 73%);
+  background: radial-gradient(circle, rgba(249,160,221,1) 0%, rgba(249,160,160,0.47) 16%, rgba(249,160,103,0.16) 44%, rgba(249,160,62,0.04) 59%, rgba(249,160,36,0.01) 68%, rgba(240,107,138,0) 73%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9a0dd",endColorstr="#f06b8a",GradientType=1);
+}
 
 @tailwind base;
 @tailwind components;
