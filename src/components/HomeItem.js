@@ -5,11 +5,8 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import Images from '../components/importImg';
 
 const HomeItem = ({ item }) => {
-    console.log(item.id);
-    console.log(Images);
-    console.log(Images[item.id]);
   return (
-        <div 
+    <div 
             style={{backgroundImage: `url(${Images[item.id-1]})`}}
             className={`relative overflow-hidden bg-purple rounded-3xl bg-cover bg-center flex flex-col justify-between md:h-52 w-64 lg:w-72 lg:h-80 md:p-4`}>
             <div className='absolute bg-black w-full h-full top-0 left-0 bg-opacity-30 backdrop-blur-[0.5px]'></div>

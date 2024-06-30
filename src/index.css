@@ -13,8 +13,10 @@ code {
     monospace;
 }
 
+
+
 #item {
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   z-index: 1;
   background-position: center;
@@ -35,16 +37,16 @@ code {
 }
 
 #item:nth-child(3) {
-  left: 50%;
+  left: 23%;
 }
 #item:nth-child(4) {
-  left: calc(50% + 220px);
+  left: calc(23% + 200px);
 }
 #item:nth-child(5) {
-  left: calc(50% + 440px);
+  left: calc(23% + 400px);
 }
 #item:nth-child(6) {
-  left: calc(50% + 660px);
+  left: calc(20% + 600px);
   opacity: 0;
 }
 
@@ -52,8 +54,9 @@ code {
 .content {
   width: min(30vw, 400px);
   position: absolute;
-  top: 50%;
-  left: 3rem;
+  top: 40%;
+  left: 33%;
+  text-align:center;
   transform: translateY(-50%);
   color: white;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
@@ -89,7 +92,7 @@ code {
 @keyframes show {
   0% {
     filter: blur(5px);
-    transform: translateY(calc(-50% + 75px));
+    transform: translateY(calc(-50%));
   }
   100% {
     opacity: 1;
@@ -116,6 +119,11 @@ code {
   background: -webkit-radial-gradient(circle, rgba(249,160,221,1) 0%, rgba(249,160,160,0.47) 16%, rgba(249,160,103,0.16) 44%, rgba(249,160,62,0.04) 59%, rgba(249,160,36,0.01) 68%, rgba(240,107,138,0) 73%);
   background: radial-gradient(circle, rgba(249,160,221,1) 0%, rgba(249,160,160,0.47) 16%, rgba(249,160,103,0.16) 44%, rgba(249,160,62,0.04) 59%, rgba(249,160,36,0.01) 68%, rgba(240,107,138,0) 73%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9a0dd",endColorstr="#f06b8a",GradientType=1);
+}
+
+
+.volume-control{
+  accent-color: white;
 }
 
 @tailwind base;

@@ -12,5 +12,5 @@ export const  CONTENTDATA = [
 {"id":7,"meditation_duration":17,"meditation_mood":["peaceful","calm"],"meditation_goal":"improve focus","name":"Walking Meditation","img":"src/assets/zenbreath/7.jpeg"},
 {"id":8,"meditation_duration":39,"meditation_mood":["relaxed","tranquil"],"meditation_goal":"cultivate self-awareness","name":"Guided Visualization Meditation","img":"src/assets/zenbreath/8.jpeg"},
 {"id":9,"meditation_duration":16,"meditation_mood":["content","zen"],"meditation_goal":"promote emotional well-being","name":"Zen Meditation","img":"src/assets/zenbreath/9.jpeg"},
-{"id":10,"meditation_duration":9,"meditation_mood":["rejuvenated","tranquil"],"meditation_goal":"find clarity","name":"Breath Awareness Meditation","img":"src/assets/zenbreath/10.jpeg"}
+{"id":10,"meditation_duration":9,"meditation_mood":["rejuvenated","tranquil"],"meditation_goal":"find clarity","name":"Mind Awareness Meditation","img":"src/assets/zenbreath/10.jpeg"}
 ]

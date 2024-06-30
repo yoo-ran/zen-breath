@@ -1,99 +1,114 @@
+
+import { useEffect, useState } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft,faChevronRight, faFan } from '@fortawesome/free-solid-svg-icons'
 
+import {getAllData} from "../data/contents"
+import Images from '../components/importImg';
+
+import MusicPlay from '../components/MusicPlay';
+
 const Meditation = () => {
+    let data = getAllData()
+    const [mItem, setMItem] = useState({})
+    const [openM, setOpenM] = useState(false)
+    const [openMChild, setOpenMChild] = useState(false)
 
-
+    console.log(openM);
     const activate = (e) => {
         const slider = document.querySelector(".slider");
         const items = document.querySelectorAll("#item"); // Changed ID to class for uniqueness
-        console.log(slider);
         if (e.currentTarget.classList.contains("next")) {
             slider.append(items[0]);
         } else if (e.currentTarget.classList.contains("prev")) {
             slider.prepend(items[items.length - 1]);
         }
     };
+
+    const musicID = (item) => {
+        setMItem(item)
+        setOpenM(true)
+    }
+
+    const openFromChild = (newOpenM) => {
+        setOpenM(newOpenM);
+    };
+
+
     return(
-        <div>
+        <div className='relative'>
+            <div className={`${openM || openMChild ? "":"hidden"}`}>
+                <MusicPlay item={mItem} openM={openM} setOpenM={openFromChild}/>
+            </div>
             <section className='absolute z-10 p-10'>
                 <h1 className='text-white font-bold text-xl'><FontAwesomeIcon icon={faFan} /> Daily Meditation</h1>
             </section>
-            <section className='relative w-full h-lvh overflow-hidden'>
-                <ul className='slider'>
-                    <li 
-                        id='item'
-                        className='z-30 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/1.jpeg')})` }}>
-                    <div className='content'>
-                        <h2 className='title font-bold text-2xl'>"Down the River"</h2>
-                        <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                        <button>Read More</button>
-                    </div>
-                    </li>
-                    <li 
-                        id='item'
-                        className='z-20 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl  drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/2.jpeg')})` }}>
-                    <div className='content'>
-                        <h2 className='title font-bold text-2xl'>"Estrange Bond"</h2>
-                        <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                        <button>Read More</button>
-                    </div>
-                    </li>
-                    <li 
-                        id='item'
-                        className='z-10 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/3.jpeg')})` }}>
-                        <div className='content'>
-                            <h2 className='title font-bold text-2xl'>"The Gate Keeper"</h2>
-                            <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                            praesentium nisi. Id laboriosam ipsam enim. </p>
-                            <button>Read More</button>
+          
+            <section className='relative'>
+                <div className='slider h-lvh'>
+                        <div 
+                            id='item'
+                            className='z-20 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl  drop-shadow transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/1.jpeg')})` }}>
+                            <div className='content'>
+                                <h2 className='title font-bold text-2xl'>"{data[1].name}"</h2>
+                                <p className='description'>{data[1].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[1])}>Play Music</button>
+                            </div>
                         </div>
-                    </li>
-                    <li 
-                        id='item'
-                        className='z-10 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/4.jpeg')})` }}>
-                        <div className='content'>
-                            <h2 className='title font-bold text-2xl'>"The Gate Keeper"</h2>
-                            <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                            praesentium nisi. Id laboriosam ipsam enim. </p>
-                            <button>Read More</button>
+                        <div 
+                            id='item'
+                            className='z-20 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl  drop-shadow-3xl transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/7.jpeg')})` }}>
+                            <div className='content'>
+                                <h2 className='title font-bold text-2xl'>"{data[7].name}"</h2>
+                                <p className='description'>{data[7].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[7])}>Play Music</button>
+
+                            </div>
                         </div>
-                    </li>
-                    <li 
-                        id='item'
-                        className='z-10 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/5.jpeg')})` }}>
-                        <div className='content'>
-                            <h2 className='title font-bold text-2xl'>"The Gate Keeper"</h2>
-                            <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                            praesentium nisi. Id laboriosam ipsam enim. </p>
-                            <button>Read More</button>
+                        <div 
+                            id='item'
+                            className='z-10 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/3.jpeg')})` }}>
+                            <div className='content'>
+                                <h2 className='title font-bold text-2xl'>"{data[3].name}"</h2>
+                                <p className='description'>{data[3].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[3])}>Play Music</button>
+                            </div>
                         </div>
-                    </li>
-                    <li 
-                        id='item'
-                        className='z-10 absolute top-60 w-52 h-72 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                        style={{ backgroundImage: `url(${require('../assets/zenbreath/6.jpeg')})` }}>
-                        <div className='content'>
-                            <h2 className='title font-bold text-2xl'>"The Gate Keeper"</h2>
-                            <p className='description'> Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                            praesentium nisi. Id laboriosam ipsam enim. </p>
-                            <button>Read More</button>
+                        <div 
+                            id='item'
+                            className='z-10 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/9.jpeg')})` }}>
+                            <div className='content'>
+                            <h2 className='title font-bold text-2xl'>"{data[9].name}"</h2>
+                                <p className='description'>{data[9].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[9])}>Play Music</button>
+                            </div>
                         </div>
-                    </li>
-                </ul>
+                        <div 
+                            id='item'
+                            className='z-10 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/5.jpeg')})` }}>
+                            <div className='content'>
+                                <h2 className='title font-bold text-2xl'>"{data[5].name}"</h2>
+                                <p className='description'>{data[5].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[5])}>Play Music</button>
+                            </div>
+                        </div>
+                        <div 
+                            id='item'
+                            className='z-10 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/6.jpeg')})` }}>
+                            <div className='content'>
+                                <h2 className='title font-bold text-2xl'>"{data[6].name}"</h2>
+                                <p className='description'>{data[6].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[6])}>Play Music</button>
+                            </div>
+                        </div>
+                </div>
                 <nav className='nav flex gap-x-4'>
                     <div
                         className='btn prev border w-10 h-10 rounded-full text-white bg-white backdrop-blur-[2px] bg-opacity-30 flex justify-center items-center hover:bg-opacity-50'

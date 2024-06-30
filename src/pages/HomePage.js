@@ -1,7 +1,5 @@
 // src/components/Home.js
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 
 import {getAllData} from "../data/contents"
 import HomeItem from '../components/HomeItem';
