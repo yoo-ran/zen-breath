@@ -12,7 +12,7 @@ import Profile from './pages/Profile';
 const App = () => {
     return (
         <Router>
-          <div className='relative flex justify-between h-screen overflow-hidden'>
+          <div className='relative flex justify-between h-lvh overflow-hidden'>
             <div id="gradient" className='-z-10 absolute w-3/4 h-full -top-52 -left-20'></div>
             <div id="gradient" className='-z-10 absolute w-3/4 h-full -top-24 -right-96'></div>
             <div id="gradient" className='-z-10 absolute w-3/4 h-full top-80 left-64'></div>

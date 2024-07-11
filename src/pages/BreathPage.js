@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+// "@splinetool/runtime": "^0.9.145",
 
 
 import Spline from '@splinetool/react-spline';

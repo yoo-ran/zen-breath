@@ -22,7 +22,7 @@ const Settings = () => {
         {icon:"faArrowRightToBracket", title:"Logout"}
     ]
     return(
-        <div className='flex flex-col  gap-y-24 md:px-12 md:pt-12'>
+        <div className='flex flex-col gap-y-24 md:px-12 md:pt-12'>
             <section className='flex justify-between items-start'>
                 <h1 className='font-bold text-xl'><FontAwesomeIcon icon={faGear} /> Setting</h1>
                 <div>

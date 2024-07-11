@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPause, faPlay, faRotateLeft, faRotateRight, faFan, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faPause, faPlay, faRotateLeft, faRotateRight, faFan, faXmark, faVolumeHigh, faVolumeLow, faVolumeOff } from '@fortawesome/free-solid-svg-icons'
 
 import Images from '../components/importImg';
 import Music1 from "../assets/music1.mp3"
@@ -29,7 +29,7 @@ const MusicPlay = ({item, openM, setOpenM}) => {
         audioRef.current.volume = newVolume;
         setVolume(newVolume);
       };
-    
+      
       const handleTimeUpdate = () => {
         setCurrentTime(audioRef.current.currentTime);
         updateProgressBar();
@@ -101,11 +101,23 @@ const MusicPlay = ({item, openM, setOpenM}) => {
         setOpenM(!openM); 
     }    
 
+    console.log(Number(volume));
+
+    const volumeIcon = () =>{
+      if(Number(volume) == 1){
+        return <FontAwesomeIcon icon={faVolumeHigh} />
+      }else if(Number(volume)>0 && Number(volume)<1){
+        return <FontAwesomeIcon icon={faVolumeLow} />
+      }else{
+        return <FontAwesomeIcon icon={faVolumeOff} />
+      }
+    }
+
 
   return (
     
         <div
-            style={{backgroundImage: `url(${Images[item.id-1]})`}}
+            style={{backgroundImage: `url(${Images[item.id-2]})`}}
             className={`absolute flex  justify-center items-center w-full h-full z-50 ${close ? "":"hidden"} `}>
             <audio ref={audioRef} src={Music1} />
 
@@ -140,7 +152,8 @@ const MusicPlay = ({item, openM, setOpenM}) => {
                         <span className="time-display text-white text-right w-3/12 ">{formatTime(currentTime)} / {formatTime(duration)}</span>
                     </section>
 
-                    <div className="volume-control">
+                    <div className="volume-control text-white flex items-center gap-x-4">
+                        {volumeIcon()}
                         <input 
                             type="range" min="0" max="1" step="0.01" 
                             value={volume} 

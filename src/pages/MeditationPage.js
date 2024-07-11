@@ -46,7 +46,7 @@ const Meditation = () => {
             </section>
           
             <section className='relative'>
-                <div className='slider h-lvh'>
+                <div className='slider h-lvh '>
                         <div 
                             id='item'
                             className='z-20 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl  drop-shadow transition-all' 
@@ -60,12 +60,11 @@ const Meditation = () => {
                         <div 
                             id='item'
                             className='z-20 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl  drop-shadow-3xl transition-all' 
-                            style={{ backgroundImage: `url(${require('../assets/zenbreath/7.jpeg')})` }}>
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/2.jpeg')})` }}>
                             <div className='content'>
-                                <h2 className='title font-bold text-2xl'>"{data[7].name}"</h2>
-                                <p className='description'>{data[7].meditation_goal}</p>
-                                <button onClick={()=>musicID(data[7])}>Play Music</button>
-
+                                <h2 className='title font-bold text-2xl'>"{data[2].name}"</h2>
+                                <p className='description'>{data[2].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[2])}>Play Music</button>
                             </div>
                         </div>
                         <div 
@@ -81,11 +80,11 @@ const Meditation = () => {
                         <div 
                             id='item'
                             className='z-10 absolute top-60 w-44 h-44 -translate-y-1/2 bg-cover rounded-3xl drop-shadow-3xl transition-all' 
-                            style={{ backgroundImage: `url(${require('../assets/zenbreath/9.jpeg')})` }}>
+                            style={{ backgroundImage: `url(${require('../assets/zenbreath/4.jpeg')})` }}>
                             <div className='content'>
-                            <h2 className='title font-bold text-2xl'>"{data[9].name}"</h2>
-                                <p className='description'>{data[9].meditation_goal}</p>
-                                <button onClick={()=>musicID(data[9])}>Play Music</button>
+                            <h2 className='title font-bold text-2xl'>"{data[4].name}"</h2>
+                                <p className='description'>{data[4].meditation_goal}</p>
+                                <button onClick={()=>musicID(data[4])}>Play Music</button>
                             </div>
                         </div>
                         <div 

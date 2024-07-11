@@ -4,6 +4,8 @@ import { faClover } from '@fortawesome/free-solid-svg-icons'
 import {getAllData} from "../data/contents"
 import MusicItem from '../components/MusicItem';
 import Calendar from '../components/Calendar/Calendar';
+import SearchBar from '../components/SearchBar';
+import { Component } from 'react';
 
 const Profile = () => {
     let data = getAllData()
@@ -11,7 +13,10 @@ const Profile = () => {
         <div className='flex flex-col  gap-y-24 md:px-12 md:pt-12'>
             <section className='flex justify-between'>
                 <h1 className='font-bold text-xl'><FontAwesomeIcon icon={faClover} /> Profile</h1>
-                <p>filter</p>
+                <div >
+                    <SearchBar/>
+                </div>
+
             </section>
 
             <section className='flex justify-between' >
