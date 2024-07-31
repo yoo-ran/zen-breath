@@ -10,17 +10,17 @@ import { Component } from 'react';
 const Profile = () => {
     let data = getAllData()
     return(
-        <div className='flex flex-col  gap-y-24 md:px-12 md:pt-12'>
+        <div className='flex flex-col  gap-y-24 px-8 pt-8 md:px-12 md:pt-12 '>
             <section className='flex justify-between'>
                 <h1 className='font-bold text-xl'><FontAwesomeIcon icon={faClover} /> Profile</h1>
-                <div >
+                <div className='w-1/2 lg:w-3/12'>
                     <SearchBar/>
                 </div>
 
             </section>
 
-            <section className='flex justify-between' >
-                <article className='w-8/12'>
+            <section className='flex flex-col lg:flex-row justify-between gap-y-10' >
+                <article className='lg:w-8/12'>
                     <div className='flex justify-between pb-8 drop-shadow-text'>
                         <h3 className='uppercase'>calendal</h3>
                         <p>+ Add Sessions</p>
@@ -29,21 +29,21 @@ const Profile = () => {
                         <Calendar/>
                     </div>
                 </article>
-                <article className='w-3/12 flex flex-col gap-y-10'>
+                <article className='lg:w-3/12 flex flex-col gap-y-10'>
                     <div>
                         <h3 className='drop-shadow-text text-xl pb-4'>More music You’ll Love</h3>
 
                         <div
                             style={{ backgroundImage: `url(${require('../assets/zenbreath/2.jpeg')})` }}
-                            className='relative overflow-hidden flex flex-col justify-between bg-cover  text-white rounded-2xl p-4 w-72 h-72 lg:w-full lg:h-64'>
+                            className='relative overflow-hidden flex flex-col justify-between bg-cover  text-white rounded-2xl p-4 md:w-72 aspect-square lg:w-full lg:h-64'>
                             <div className='absolute top-0 left-0 bg-black h-full w-full opacity-20 z-0'></div>
                             <div className='flex justify-end gap-x-2 z-10'>
-                                <p className='relative rounded-full overflow-hidden w-1/ lg:w-1/3 lg:py-1 text-center border text-xs lg:text-same'>Calmness<p className='bg-white border backdrop-blur-3xl opacity-30 h-full w-full absolute top-0'></p></p>
-                                <p className='relative rounded-full overflow-hidden w-1/ lg:w-1/3 lg:py-1 text-center border text-xs lg:text-same'>Energy<p className='bg-white border backdrop-blur-3xl opacity-30 h-full w-full absolute top-0'></p></p>
+                                <p className='relative rounded-full overflow-hidden px-2 lg:px-0lg:w-1/3 lg:py-1 text-center border bg-white bg-opacity-30 text-xs lg:text-sm'>Calmness</p>
+                                <p className='relative rounded-full overflow-hidden px-2 lg:px-0lg:w-1/3 lg:py-1 text-center border bg-white bg-opacity-30 text-xs lg:text-sm'>Energy</p>
                             </div>
                             <div className='z-10 text-center flex flex-col justify-center h-full'>
-                                <p className='font-bold font-head text-3xl drop-shadow-text lg:text-2xl'>Focus : Flow</p>
-                                <p className='drop-shadow-text pt-2 lg:text-lg'>Serenity Streams</p>
+                                <p className='font-bold font-head text-xl md:text-3xl drop-shadow-text lg:text-2xl'>Focus : Flow</p>
+                                <p className='drop-shadow-text pt-2 text-sm lg:text-base'>Serenity Streams</p>
                             </div>
                         </div>
                     </div>

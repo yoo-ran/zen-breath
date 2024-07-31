@@ -121,18 +121,18 @@ const MusicPlay = ({item, openM, setOpenM}) => {
             className={`absolute flex  justify-center items-center w-full h-full z-50 ${close ? "":"hidden"} `}>
             <audio ref={audioRef} src={Music1} />
 
-            <div className='relative flex flex-col justify-around items-center rounded-3xl bg-[#4F4F4F] w-5/6 h-5/6 z-50 bg-opacity-65 drop-shadow border border-[#4F4F4F]'>
+            <div className='relative flex flex-col justify-around items-center rounded-3xl bg-[#4F4F4F] w-5/6 h-1/2 md:h-5/6 z-50 bg-opacity-65 drop-shadow border border-[#4F4F4F]'>
                 <h1 className='text-white font-bold text-xl text-left w-11/12'><FontAwesomeIcon icon={faFan} /> Daily Meditation</h1>
                 <div className='absolute -top-4 -right-4 cursor-pointer flex  justify-center items-center text-white md:text-3xl border rounded-full w-10 h-10 bg-white bg-opacity-50 backdrop-blur-xl drop-shadow hover:bg-darkgray'>
                     <FontAwesomeIcon icon={faXmark} onClick={closeEvent} />
                 </div>
-                <div className='w-3/4 flex flex-col gap-y-6'>
-                    <section className='flex flex-col text-center text-white h-44'>
-                        <p className='font-bold md:text-2xl'>{item.name}</p>
-                        <p className=''>{item.meditation_goal}</p>
+                <div className='w-3/4 flex flex-col gap-y-8 '>
+                    <section className='flex flex-col text-center text-white md:h-44'>
+                        <p className='font-bold text-xl md:text-2xl'>{item.name}</p>
+                        <p className='capitalize'>{item.meditation_goal}</p>
                     </section>
 
-                    <section className='flex justify-center gap-x-14 md:text-2xl text-white'>
+                    <section className='flex justify-center gap-x-14 text-xl md:text-2xl text-white'>
                         <button className="control-button" onClick={skipBackward}>
                             <FontAwesomeIcon icon={faRotateLeft} />                    
 
@@ -146,10 +146,10 @@ const MusicPlay = ({item, openM, setOpenM}) => {
                     </section>
 
                     <section className='flex justify-between items-center'>
-                        <div className="progress-bar bg-darkgray w-full h-1 rounded-full flex overflow-hidden" onClick={handleSeek}>
+                        <div className="progress-bar bg-darkgray w-full h-2 rounded-full flex overflow-hidden" onClick={handleSeek}>
                             <div className="progress  h-full bg-white" ref={progressBarRef}></div>
                         </div>
-                        <span className="time-display text-white text-right w-3/12 ">{formatTime(currentTime)} / {formatTime(duration)}</span>
+                        <span className="time-display text-white text-right w-3/12 text-xs md:text-base">{formatTime(currentTime)} / {formatTime(duration)}</span>
                     </section>
 
                     <div className="volume-control text-white flex items-center gap-x-4">

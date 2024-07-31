@@ -106,23 +106,38 @@ const Breath = () => {
         }
     }
     return(
-        <div className='flex justify-between w-full gap-x-20 p-12 h-lvh bg-footer'>
-            <section className='flex flex-col gap-y-16 w-full'>
-                <h1 className='font-bold text-2xl font-head'><FontAwesomeIcon icon={faWind} /> Breathe</h1>
+        <div className='flex flex-col justify-between items-center w-full md:h-lvh p-12 bg-footer'>
+            <section className='w-full'>
+                <h1 className='font-bold text-2xl font-head '><FontAwesomeIcon icon={faWind} /> Breathe</h1>
+            </section>
 
-                <div className='flex flex-col gap-y-8'>
-                    <h3 className='drop-shadow-3xl'>BREATH</h3>
-                    <div className='w-full h-96 rounded-3xl overflow-hidden drop-shadow-3xl'>
+            <section className='flex flex-col items-start gap-y-10 w-full md:h-3/4  lg:w-8/12'>
+                <article className='flex flex-col md:flex-row justify-between gap-y-6 w-full gap-x-4'>
+                    <div className='w-full h-96 lg:w-2/3 rounded-3xl overflow-hidden drop-shadow-3xl'>
                         <Spline 
                             scene="https://prod.spline.design/RT5xPiwUBSDqBY0K/scene.splinecode" 
                             onLoad={onLoad}
                             />
                     </div>
-                </div>
-                <div className='flex justify-between w-1/2 self-center'>
+                    <div className='relative flex md:flex-col justify-around md:justify-center rounded-3xl overflow-hidden bg-white bg-opacity-30 gap-y-16 w-full md:w-1/3 lg:w-1/4 py-4 self-center drop-shadow-3xl border border-white text-center'>
+                        <div className='z-10 flex flex-col gap-y-2'>
+                            <p className='text-2xl md:text-4xl font-bold'>{numCount}</p>
+                            <p className='text-sm md:text-lg'>Count</p>
+                        </div>
+                        <div className='z-10 flex flex-col gap-y-2'>
+                            <p className='text-2xl md:text-4xl font-bold text-blue'>{inCount}s</p>
+                            <p className='text-sm md:text-lg'>Inhale</p>
+                        </div>
+                        <div className='z-10 flex flex-col gap-y-2'>
+                            <p className='text-2xl md:text-4xl font-bold text-darkorange'>{exCount}s</p>
+                            <p className='text-sm md:text-lg'>Exhale</p>
+                        </div>           
+                    </div>
+                </article>
+                <article className='flex justify-around w-full lg:w-2/3'>
                     <button 
                         type="button" 
-                        className='start relative overflow-hidden border border-2 rounded-full px-4 py-1 text-blue text-lg font-bold  bg-white bg-opacity-30 backdrop-blur-sm' 
+                        className='start relative overflow-hidden border border-2 rounded-full px-4 py-1 text-blue md:text-lg font-bold  bg-white bg-opacity-30 backdrop-blur-sm' 
                         onClick={triggerAnimation}
                         disabled={isCountingIn || isCountingEx }
                     >
@@ -130,29 +145,13 @@ const Breath = () => {
                     </button>
                     <button 
                         type="button"
-                        className='relative overflow-hidden border border-2 rounded-full px-4 py-1 text-darkorange text-lg font-bold bg-white bg-opacity-30 backdrop-blur-sm' 
+                        className='relative overflow-hidden border border-2 rounded-full px-4 py-1 text-darkorange md:text-lg font-bold bg-white bg-opacity-30 backdrop-blur-sm' 
                         onClick={triggerAnimation}
                     >
                         Stop
                     </button>
-                </div>
-            </section>
-            <section className='relative flex flex-col justify-center rounded-3xl overflow-hidden gap-y-16 w-1/3 h-96 self-center drop-shadow-3xl border border-white text-center'>
-                <div className='absolute w-full h-full bg-white bg-opacity-30 backdrop-blur-sm'></div>
-                <article className='z-10 flex flex-col gap-y-2'>
-                    <p className='text-4xl font-bold'>{numCount}</p>
-                    <p>Count</p>
                 </article>
-                <article className='z-10 flex flex-col gap-y-2'>
-                    <p className='text-4xl font-bold text-blue'>{inCount}s</p>
-                    <p>INHALE</p>
-                </article>
-                <article className='z-10 flex flex-col gap-y-2'>
-                    <p className='text-4xl font-bold text-darkorange'>{exCount}s</p>
-                    <p>Exhale</p>
-                </article>                
-            </section>
-            
+            </section>         
         </div>
 
     )

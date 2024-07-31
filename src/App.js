@@ -12,15 +12,15 @@ import Profile from './pages/Profile';
 const App = () => {
     return (
         <Router>
-          <div className='relative flex justify-between h-lvh overflow-hidden'>
-            <div id="gradient" className='-z-10 absolute w-3/4 h-full -top-52 -left-20'></div>
-            <div id="gradient" className='-z-10 absolute w-3/4 h-full -top-24 -right-96'></div>
-            <div id="gradient" className='-z-10 absolute w-3/4 h-full top-80 left-64'></div>
+          <div className='relative flex md:justify-between overflow-hidden'>
+            <div id="gradient" className='-z-10 absolute blur w-[48rem] md:w-[64rem] lg:w-full lg:h-full h-1/2  -top-32 -left-32  md:-top-54 md:-left-32 lg:-top-64 lg:-left-64'></div>
+            <div id="gradient" className='-z-10 absolute blur w-[48rem] md:w-[64rem] lg:w-full lg:h-full h-1/2  top-1/4 -left-48 md:bottom-24 md:left-1/2 '></div>
+            <div id="gradient" className='-z-10 absolute blur w-[48rem] md:w-[64rem] lg:w-full lg:h-full  h-1/2 -bottom-40 md:-bottom-18 md:-left-10 lg:-bottom-64'></div>
 
-            <div className='md:w-2/12 h-lvh'>
+            <div className=' md:w-2/12 '>
               <Header />
             </div>
-            <div className='md:w-10/12 h-lvh'>
+            <div className='w-full md:w-10/12 '>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/meditation" element={<Meditation />} />

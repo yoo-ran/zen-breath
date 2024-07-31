@@ -10,13 +10,13 @@ const MusicItem = ({ item }) => {
     
         <div 
             style={{backgroundImage: `url(${Images[item.id]})`}}
-            className={`bg-orange flex justify-between items-center p-8`}>
+            className={`bg-orange flex justify-between items-center p-4 md:p-8`}>
                 <div>
-                    <span className='md:text-sm'>{item.meditation_goal}</span>
-                    <p className='font-bold'>{item.name}</p>
+                    <span className='text-xs md:text-sm'>{item.meditation_goal}</span>
+                    <p className='font-bold text-sm'>{item.name}</p>
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faCirclePlay} className='md:text-2xl opacity-80'/>
+                    <FontAwesomeIcon icon={faCirclePlay} className='text-lg md:text-2xl opacity-80'/>
                 </div>
         </div>
 

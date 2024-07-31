@@ -17,11 +17,11 @@ const SearchBar = () => {
                     <FontAwesomeIcon icon={faSliders} />
                 </div>
             </div>
-            <div className='flex justify-between gap-x-2 w-full'>
-                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-darkgray lg:text-sm drop-shadow'>Calmness</div>
-                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-darkgray lg:text-sm drop-shadow'>Energy</div>
-                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-darkgray lg:text-sm drop-shadow'>Positive</div>
-                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-darkgray lg:text-sm drop-shadow'>Blue</div>
+            <div className='flex flex-wrap justify-between gap-x-2 gap-y-2 w-full'>
+                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-white text-xs lg:text-sm drop-shadow'>Calmness</div>
+                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-white text-xs lg:text-sm drop-shadow'>Energy</div>
+                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-white text-xs lg:text-sm drop-shadow'>Positive</div>
+                <div className='flex items-center bg-purple py-1 px-2 rounded-full text-white text-xs lg:text-sm drop-shadow'>Blue</div>
             </div>
         </div>
 

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'purple': 'rgba(203,184,255,0.5)',
+        'purple': 'rgba(203,184,255)',
         'orange': 'rgba(248,163,84,0.3)',
         'darkorange': '#FF7B3A',
         'white': '#fff',

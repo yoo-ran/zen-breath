@@ -15,7 +15,6 @@ const Meditation = () => {
     const [openM, setOpenM] = useState(false)
     const [openMChild, setOpenMChild] = useState(false)
 
-    console.log(openM);
     const activate = (e) => {
         const slider = document.querySelector(".slider");
         const items = document.querySelectorAll("#item"); // Changed ID to class for uniqueness
@@ -38,7 +37,7 @@ const Meditation = () => {
 
     return(
         <div className='relative'>
-            <div className={`${openM || openMChild ? "":"hidden"}`}>
+            <div className={` ${openM || openMChild ? "":"hidden"}`}>
                 <MusicPlay item={mItem} openM={openM} setOpenM={openFromChild}/>
             </div>
             <section className='absolute z-10 p-10'>
