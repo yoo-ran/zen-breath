@@ -5,7 +5,7 @@ import CalendarCells from './CalendarCells';
 import EventModal from './EventModal';
 
 const Calendar = () => {
-  const [today] = useState(new Date());
+  const [today] = useState(new Date());;
   const [events, setEvents] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
